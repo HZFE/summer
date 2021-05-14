@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>夏天到了 吹空调叭</title>
+    <style>
+      body {
+        padding: 10px;
+        color: rgb(18, 170, 61);
+        background-color: #efefef;
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .img {
+        width: 100%;
+      }
+      .img.d {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .n {
+        display: none;
+      }
+      .s {
+        display: block;
+      }
+      .num {
+        color: aquamarine;
+        font-weight: bolder;
+        position: absolute;
+        top: 22.6%;
+        right: 42%;
+        font-size: 0.75rem;
+      }
+      .leaf {
+        transform-origin: 65% 50%;
+        animation: circle 0.4s infinite linear;
+        -webkit-animation: circle 0.4s infinite linear;
+      }
+      @keyframes circle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes circle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .wind {
+        animation: blow 1s infinite ease-in-out;
+        -webkit-animation: blow 1s infinite ease-in-out;
+      }
+      @keyframes blow {
+        0% {
+          opacity: 0.3;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes blow {
+        0% {
+          opacity: 0.3;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .oper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .oper span {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+        border: 1px solid;
+        font-size: 25px;
+        line-height: 26px;
+        height: 28px;
+        background: #fff;
+        border-radius: 4px;
+        transition: color 0.3s;
+      }
+      .oper span:active {
+        color: #6ec37a;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text" style="text-align: center; font-size: 28px">
+      <span
+        style="
+          font-size: 36px;
+          padding-top: 120px;
+          display: inline-block;
+          font-weight: bolder;
+          letter-spacing: 4px;
+          box-sizing: border-box;
+          -webkit-text-stroke: 2px #c73a14;
+          color: transparent;
+        "
+        >夏天到啦<br /><span style="font-size: 46px">你吹什么</span></span
+      >
+    </p>
+    <div style="position: relative" class="d n">
+      <img class="img basic" src="./i/b1.png" />
+      <img class="img d leaf" src="./i/b2.png" style="opacity: 0" />
+      <img class="img d" src="./i/b3.png" />
+      <div style="text-align: center; font-size: 14px">
+        当前温度：<span class="bad-val"></span>°C
+        <div
+          class="tips"
+          style="color: red; font-size: 38px; font-weight: 600"
+        ></div>
+        <div
+          style="text-decoration-line: underline"
+          onclick="location.reload()"
+        >
+          我要吹其他的！
+        </div>
+      </div>
+    </div>
+    <div style="position: relative" class="a n">
+      <img class="img a" src="./i/c2.png" />
+      <div class="num"><span class="num-val"></span>°C</div>
+      <img
+        class="img a wind"
+        src="./i/c3.png"
+        style="position: relative; margin-top: -8%"
+      />
+      <div class="oper">
+        <span class="minus" data-t="0">-</span>
+        <span class="plus" data-t="1">+</span>
+      </div>
+    </div>
+    <script>
+      const t = document.querySelector(".text");
+      setTimeout(() => {
+        (() => {
+          const ac = {
+            num: 27,
+            badNum: 33,
+          };
+          ac.ok = Math.random() < 0.3;
+          if (ac.ok) {
+            const a = document.querySelector(".a");
+            const v = document.querySelector(".num-val");
+
+            t.innerText = "吹空调";
+            v.innerText = ac.num;
+            a.className = a.className + " s";
+
+            document
+              .querySelector(".oper")
+              .addEventListener("click", function (e) {
+                if (e.target && e.target.dataset) {
+                  if (e.target.dataset.t === "1") {
+                    v.innerText = ++ac.num > 31 ? (ac.num = 31) : ac.num;
+                    if (ac.num === 31) {
+                      setTimeout(() => {
+                        alert("你怎么不吹空调外机");
+                      }, 100);
+                    }
+                  } else if (e.target.dataset.t === "0") {
+                    v.innerText = --ac.num < 16 ? (ac.num = 16) : ac.num;
+                  }
+                }
+              });
+          } else {
+            const d = document.querySelector(".d");
+            const b = document.querySelector(".bad-val");
+            const ba = document.querySelector(".basic");
+
+            // ba.addEventListener("load", function (e) {
+            const l = document.querySelector(".leaf");
+            l.style.opacity = 1;
+            // });
+
+            t.innerText = "吹空调外机";
+            const val = ac.badNum + Math.floor(Math.random() * 10);
+            b.innerText = val;
+            if (val >= 38) {
+              const c = document.querySelector(".tips");
+              setTimeout(() => {
+                c.innerText = "想活命就离开这";
+              }, 2000);
+            }
+            d.className = d.className + " s";
+          }
+        })();
+      }, 1600);
+    </script>
+  </body>
+</html>
