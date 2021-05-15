@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>夏天到了 吹空调叭</title>
+    <title>夏天到了 吹点啥鸭</title>
     <style>
       :root {
         font-family: Helvetica, Tahoma, Arial, PingFang SC, Hiragino Sans GB,
@@ -18,7 +18,14 @@
         margin: 0 auto;
         -webkit-tap-highlight-color: transparent;
       }
+      .text {
+        -webkit-text-stroke: 1px #444;
+        color: transparent;
+      }
       .img {
+        width: 95%;
+      }
+      .img.a {
         width: 100%;
       }
       .img.d {
@@ -139,7 +146,7 @@
     </style>
   </head>
   <body>
-    <p class="text" style="text-align: center; font-size: 28px">
+    <p class="text" style="text-align: center; font-size: 18px">
       <span
         style="
           font-size: 36px;
@@ -151,7 +158,10 @@
           -webkit-text-stroke: 2px #c73a14;
           color: transparent;
         "
-        >夏天到啦<br /><span style="font-size: 46px">你吹什么</span></span
+        >夏天到啦<br /><span style="font-size: 46px">吹点啥鸭<img src="./i/d.png" style="    width: 70%;
+          position: relative;
+          top: -28px;
+          z-index: -100;"></span
       >
     </p>
     <div style="position: relative" class="d n">
@@ -164,12 +174,6 @@
           class="tips"
           style="color: red; font-size: 38px; font-weight: 600"
         ></div>
-        <div
-          style="text-decoration-line: underline"
-          onclick="location.reload()"
-        >
-          我要吹其他的！
-        </div>
       </div>
     </div>
     <div style="position: relative" class="a n">
@@ -183,6 +187,21 @@
       <div class="oper">
         <span class="minus" data-t="0">-</span>
         <span class="plus" data-t="1">+</span>
+      </div>
+      <div
+        style="
+          text-decoration-line: underline;
+          position: fixed;
+          bottom: calc(env(safe-area-inset-bottom) + 60px);
+          font-size: 14px;
+          color: #444;
+          left: 0;
+          right: 0;
+          text-align: center;
+        "
+        onclick="location.reload()"
+      >
+        我要吹点别的！
       </div>
     </div>
     <div data-v-240e8e56="" class="container-footer">
