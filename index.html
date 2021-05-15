@@ -5,145 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>夏天到了 吹点啥鸭</title>
-    <style>
-      :root {
-        font-family: Helvetica, Tahoma, Arial, PingFang SC, Hiragino Sans GB,
-          Heiti SC, Microsoft YaHei, WenQuanYi Micro Hei;
-      }
-      body {
-        padding: 10px;
-        color: rgb(18, 170, 61);
-        background-color: #efefef;
-        max-width: 600px;
-        margin: 0 auto;
-        -webkit-tap-highlight-color: transparent;
-      }
-      .text {
-        -webkit-text-stroke: 1px #444;
-        color: transparent;
-      }
-      .img {
-        width: 95%;
-      }
-      .img.a {
-        width: 100%;
-      }
-      .img.d {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      .n {
-        display: none;
-      }
-      .s {
-        display: block;
-      }
-      .num {
-        color: aquamarine;
-        font-weight: bolder;
-        position: absolute;
-        top: 22.6%;
-        right: 42%;
-        font-size: 0.75rem;
-      }
-      .leaf {
-        transform-origin: 65% 50%;
-        animation: circle 0.4s infinite linear;
-        -webkit-animation: circle 0.4s infinite linear;
-      }
-      @keyframes circle {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      @-webkit-keyframes circle {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .wind {
-        animation: blow 1s infinite ease-in-out;
-        -webkit-animation: blow 1s infinite ease-in-out;
-      }
-      @keyframes blow {
-        0% {
-          opacity: 0.3;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      @-webkit-keyframes blow {
-        0% {
-          opacity: 0.3;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      .oper {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
-      .oper span {
-        display: inline-block;
-        width: 40px;
-        text-align: center;
-        border: 1px solid;
-        font-size: 25px;
-        line-height: 26px;
-        height: 28px;
-        background: #fff;
-        border-radius: 4px;
-        transition: color 0.3s;
-      }
-      .oper span:active {
-        color: #6ec37a;
-      }
-
-      .container-footer {
-        position: fixed;
-        bottom: calc(env(safe-area-inset-bottom) + 30px);
-        left: 0;
-        text-align: center;
-        right: 0;
-        color: #333;
-      }
-
-      .container-footer .copyright {
-        font-weight: lighter;
-        font-size: 10px;
-      }
-
-      .container-footer .links a[data-v-240e8e56]:not(:last-child):after {
-        position: relative;
-        content: "·";
-        left: 3px;
-        margin-right: 5px;
-      }
-
-      .container-footer .links[data-v-240e8e56] {
-        margin-left: 1ex;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      .container-footer .links a[data-v-240e8e56] {
-        text-decoration: none;
-        color: #b78775;
-        font-weight: 400;
-      }
-    </style>
+    <link href="https://cdn.jsdelivr.net/gh/HZFE/summer/index.css"></link>
   </head>
   <body>
     <p class="text" style="text-align: center; font-size: 18px">
@@ -158,35 +20,40 @@
           -webkit-text-stroke: 2px #c73a14;
           color: transparent;
         "
-        >夏天到啦<br /><span style="font-size: 46px">吹点啥鸭<img src="./i/d.png" style="    width: 70%;
+        >夏天到啦<br /><span style="font-size: 46px">吹点啥鸭<img src="https://cdn.jsdelivr.net/gh/HZFE/summer/i/d.png" style="    width: 70%;
           position: relative;
           top: -28px;
           z-index: -100;"></span
       >
     </p>
     <div style="position: relative; overflow: hidden;" class="d n">
-      <img class="img basic" src="./i/b1.png" />
-      <img class="img d leaf" src="./i/b2.png" style="opacity: 0" />
-      <img class="img d" src="./i/b3.png" />
+      <img class="img basic" src="https://cdn.jsdelivr.net/gh/HZFE/summer/i/b1.png" />
+      <img class="img d leaf" src="https://cdn.jsdelivr.net/gh/HZFE/summer/i/b2.png" style="opacity: 0" />
+      <img class="img d" src="https://cdn.jsdelivr.net/gh/HZFE/summer/i/b3.png" />
       <div style="text-align: center;
       font-size: 24px;
       position: absolute;
-      top: 60px;
-    left: 60px;color: #ffffff;
+      top: 20%;
+    left: 15%;color: #ffffff;
       text-shadow: 0px 0px 3px #514f4e;">
         <span class="bad-val"></span>°C
       </div>
       <div
           class="tips"
-          style="color: red; font-size: 38px; font-weight: 600;text-align: center;"
+          style="color: red; font-size: 38px; font-weight: 600;text-align: center;position: absolute;    bottom: -10px;
+          display: flex;
+          justify-content: center;
+          left: 0;
+          right: 0;
+      "
         ></div>
     </div>
     <div style="position: relative" class="a n">
-      <img class="img a" src="./i/c2.png" />
+      <img class="img a" src="https://cdn.jsdelivr.net/gh/HZFE/summer/i/c2.png" />
       <div class="num"><span class="num-val"></span>°C</div>
       <img
         class="img a wind"
-        src="./i/c3.png"
+        src="https://cdn.jsdelivr.net/gh/HZFE/summer/i/c3.png"
         style="position: relative; margin-top: -8%"
       />
       <div class="oper">
@@ -195,7 +62,6 @@
       </div>
       <div
         style="
-          
           position: fixed;
           bottom: calc(env(safe-area-inset-bottom) + 60px);
           font-size: 14px;
@@ -228,62 +94,6 @@
         >
       </p>
     </div>
-    <script>
-      const t = document.querySelector(".text");
-      setTimeout(() => {
-        (() => {
-          const ac = {
-            num: 27,
-            badNum: 35,
-          };
-          ac.ok = Math.random() < 0.3;
-          if (ac.ok) {
-            const a = document.querySelector(".a");
-            const v = document.querySelector(".num-val");
-
-            t.innerText = "吹空调";
-            v.innerText = ac.num;
-            a.className = a.className + " s";
-
-            document
-              .querySelector(".oper")
-              .addEventListener("click", function (e) {
-                if (e.target && e.target.dataset) {
-                  if (e.target.dataset.t === "1") {
-                    v.innerText = ++ac.num > 31 ? (ac.num = 31) : ac.num;
-                    if (ac.num === 31) {
-                      setTimeout(() => {
-                        alert("你怎么不吹空调外机");
-                      }, 100);
-                    }
-                  } else if (e.target.dataset.t === "0") {
-                    v.innerText = --ac.num < 16 ? (ac.num = 16) : ac.num;
-                  }
-                }
-              });
-          } else {
-            const d = document.querySelector(".d");
-            const b = document.querySelector(".bad-val");
-            const ba = document.querySelector(".basic");
-
-            // ba.addEventListener("load", function (e) {
-            const l = document.querySelector(".leaf");
-            l.style.opacity = 1;
-            // });
-
-            t.innerText = "吹空调外机";
-            const val = ac.badNum + Math.floor(Math.random() * 10);
-            b.innerText = val;
-            if (val >= 38) {
-              const c = document.querySelector(".tips");
-              setTimeout(() => {
-                c.innerText = "恭喜中暑";
-              }, 1200);
-            }
-            d.className = d.className + " s";
-          }
-        })();
-      }, 1600);
-    </script>
+    <script src="https://cdn.jsdelivr.net/gh/HZFE/summer/index.min.js"></script>
   </body>
 </html>
