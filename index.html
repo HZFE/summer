@@ -164,17 +164,22 @@
           z-index: -100;"></span
       >
     </p>
-    <div style="position: relative" class="d n">
+    <div style="position: relative; overflow: hidden;" class="d n">
       <img class="img basic" src="./i/b1.png" />
       <img class="img d leaf" src="./i/b2.png" style="opacity: 0" />
       <img class="img d" src="./i/b3.png" />
-      <div style="text-align: center; font-size: 14px">
-        当前温度：<span class="bad-val"></span>°C
-        <div
-          class="tips"
-          style="color: red; font-size: 38px; font-weight: 600"
-        ></div>
+      <div style="text-align: center;
+      font-size: 24px;
+      position: absolute;
+      top: 60px;
+    left: 60px;color: #ffffff;
+      text-shadow: 0px 0px 3px #514f4e;">
+        <span class="bad-val"></span>°C
       </div>
+      <div
+          class="tips"
+          style="color: red; font-size: 38px; font-weight: 600;text-align: center;"
+        ></div>
     </div>
     <div style="position: relative" class="a n">
       <img class="img a" src="./i/c2.png" />
@@ -190,7 +195,7 @@
       </div>
       <div
         style="
-          text-decoration-line: underline;
+          
           position: fixed;
           bottom: calc(env(safe-area-inset-bottom) + 60px);
           font-size: 14px;
@@ -201,7 +206,13 @@
         "
         onclick="location.reload()"
       >
-        我要吹点别的！
+        <span style="font-size: 28px;
+        color: #d83737;
+        position: relative;
+        top: 4px;">“</span><span style="text-decoration-line: underline;">点我！吹点别的</span><span style="font-size: 28px;
+        color: #d83737;
+        position: relative;
+        top: 4px;">”</span>
       </div>
     </div>
     <div data-v-240e8e56="" class="container-footer">
@@ -223,7 +234,7 @@
         (() => {
           const ac = {
             num: 27,
-            badNum: 33,
+            badNum: 35,
           };
           ac.ok = Math.random() < 0.3;
           if (ac.ok) {
@@ -266,8 +277,8 @@
             if (val >= 38) {
               const c = document.querySelector(".tips");
               setTimeout(() => {
-                c.innerText = "想活命就离开这";
-              }, 2000);
+                c.innerText = "恭喜中暑";
+              }, 1200);
             }
             d.className = d.className + " s";
           }
