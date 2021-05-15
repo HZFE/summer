@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>夏天到了 吹空调叭</title>
     <style>
+      :root {
+        font-family: Helvetica, Tahoma, Arial, PingFang SC, Hiragino Sans GB,
+          Heiti SC, Microsoft YaHei, WenQuanYi Micro Hei;
+      }
       body {
         padding: 10px;
         color: rgb(18, 170, 61);
         background-color: #efefef;
-        font-family: sans-serif;
         max-width: 600px;
         margin: 0 auto;
         -webkit-tap-highlight-color: transparent;
@@ -98,6 +101,41 @@
       .oper span:active {
         color: #6ec37a;
       }
+
+      .container-footer {
+        position: fixed;
+        bottom: calc(env(safe-area-inset-bottom) + 30px);
+        left: 0;
+        text-align: center;
+        right: 0;
+        color: #333;
+      }
+
+      .container-footer .copyright {
+        font-weight: lighter;
+        font-size: 10px;
+      }
+
+      .container-footer .links a[data-v-240e8e56]:not(:last-child):after {
+        position: relative;
+        content: "·";
+        left: 3px;
+        margin-right: 5px;
+      }
+
+      .container-footer .links[data-v-240e8e56] {
+        margin-left: 1ex;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .container-footer .links a[data-v-240e8e56] {
+        text-decoration: none;
+        color: #b78775;
+        font-weight: 400;
+      }
     </style>
   </head>
   <body>
@@ -146,6 +184,19 @@
         <span class="minus" data-t="0">-</span>
         <span class="plus" data-t="1">+</span>
       </div>
+    </div>
+    <div data-v-240e8e56="" class="container-footer">
+      <p data-v-240e8e56="" class="copyright">
+        <span data-v-240e8e56="" class="no-select">© 2016 - 2021</span>
+        ac.hzfe.org
+        <span data-v-240e8e56="" class="links"
+          ><a
+            data-v-240e8e56=""
+            href="https://mp.weixin.qq.com/s/fmNA4isEAQUyscWbf3BPJQ"
+            >关于我们</a
+          ></span
+        >
+      </p>
     </div>
     <script>
       const t = document.querySelector(".text");
