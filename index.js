@@ -6,6 +6,12 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 const t = document.querySelector(".text");
+document.addEventListener("click", (ev) => {
+  if (ev.target.className === "jump" || ev.target.className === "rl") {
+    location.href =
+      location.origin + location.pathname + "?time=" + new Date().getTime();
+  }
+});
 setTimeout(() => {
   (() => {
     const ac = {
