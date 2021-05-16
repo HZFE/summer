@@ -13,8 +13,9 @@ setTimeout(() => {
     num: 27,
     badNum: 36,
   };
-  ac.ok = v < 0.66;
-  ac.isfan = v < 0.33;
+  ac.ok = v < 0.5;
+  ac.isfan = v < 0.25;
+  ac.iscow = v > 0.75;
   if (ac.ok) {
     if (ac.isfan) {
       const f = document.querySelector(".f");
@@ -44,6 +45,12 @@ setTimeout(() => {
       }
     });
   } else {
+    if (ac.iscow) {
+      t.innerText = "吹牛";
+      const c = document.querySelector(".c");
+      c.className = c.className + " s";
+      return;
+    }
     const d = document.querySelector(".d");
     const b = document.querySelector(".bad-val");
 
