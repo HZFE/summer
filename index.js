@@ -12,7 +12,7 @@ setTimeout(() => {
       num: 27,
       badNum: 35,
     };
-    ac.ok = Math.random() < 0.3;
+    ac.ok = Math.random() < 0.45;
     if (ac.ok) {
       const a = document.querySelector(".a");
       const v = document.querySelector(".num-val");
