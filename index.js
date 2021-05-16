@@ -12,8 +12,15 @@ setTimeout(() => {
       num: 27,
       badNum: 35,
     };
-    ac.ok = Math.random() < 0.45;
+    ac.ok = Math.random() < 0.6;
     if (ac.ok) {
+      ac.isfan = Math.random() > 0.5;
+      if (ac.isfan) {
+        const f = document.querySelector(".f");
+        t.innerText = "吹风扇";
+        f.className = f.className + " s";
+        return;
+      }
       const a = document.querySelector(".a");
       const v = document.querySelector(".num-val");
 
