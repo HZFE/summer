@@ -1,12 +1,3 @@
-var _hmt = _hmt || [];
-(function () {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?ef60d248d3774d6c1de1fa5da56f053f";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-const t = document.querySelector(".text");
-
 setTimeout(() => {
   var v = Math.random();
   const ac = {
