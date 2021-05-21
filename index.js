@@ -5,9 +5,9 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
-const t = document.querySelector(".text");
 
 setTimeout(() => {
+  const t = document.querySelector(".text");
   var v = Math.random();
   const ac = {
     num: 27,
